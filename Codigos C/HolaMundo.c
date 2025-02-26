@@ -6,3 +6,5 @@ int main() {
     getchar();
     return 0;
 }
+
+La unica diferencia de este codigo al otro que que son los codigos mas comunes solo que este agrega mas cosas

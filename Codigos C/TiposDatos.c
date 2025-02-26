@@ -17,3 +17,5 @@ int main() {
 
     return 0;
 }
+
+Este codigo a diferencia del de py podemos sacar los valores de las variables que queramos

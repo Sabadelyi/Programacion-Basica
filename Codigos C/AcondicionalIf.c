@@ -16,3 +16,5 @@ int main() {
 
     return 0;
 }
+
+la unica diferencia de este lenguaje es que pude contener errores en el codigo 

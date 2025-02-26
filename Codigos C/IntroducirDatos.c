@@ -16,3 +16,5 @@ int main() {
 
     return 0;
 }
+
+Este codigo a diferencia del otro esque en este podremos sacar ecuasiones un poco mas complicadas

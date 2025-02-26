@@ -13,3 +13,5 @@ int main() {
 
     return 0;
 }
+
+En este codigo a diferencia del otro podremos sacar raises cuadradas

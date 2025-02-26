@@ -4,3 +4,5 @@ x = 10
 x = 5
 y = x + 5
 print(y)
+
+Este codigo de py a diferencia del de c nos estan complejo 

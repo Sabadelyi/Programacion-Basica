@@ -8,3 +8,5 @@ int main() {
     printf("La suma de %d y %d es %d\n", num1, num2, suma);
     return 0;
 }
+
+La unica diferencia de este lenguaje al de py es que es mas complejo 

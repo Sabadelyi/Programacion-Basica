@@ -10,3 +10,5 @@ print("Entero = ", entero)
 print("Cadena = ", cadena)
 print("flotante =", flotante)
 print("Booleano =", booleano)
+
+Este codigo nos enseña los tipos de datos mas sencillos en el lenguaje de programacion

@@ -23,5 +23,6 @@ print(materias)
 materias.append("Programacion Avanzada")  
 materias.append([1, "Programacion Basica"])  
 print(materias)
+
 for Materias in materias:
 	print(Materias)

@@ -8,7 +8,7 @@ estudiantes = {
     "Maria": {"edad": 23, "carrera": "Arquitectura", "promedio": 8.9}
 }
 
-# Imprimir el diccionario completo
+# Imprimir el diccionario completos
 print("Diccionario de estudiantes:")
 for nombre, detalles in estudiantes.items():
     print(f"{nombre}: {detalles}")

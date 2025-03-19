@@ -10,18 +10,14 @@ estudiantes = {
     "Manuel": {"edad": 21, "carrera": "Mecatronica", "promedio": 7.8},
     "Adal": {"edad": 23, "carrera": "Mecatronica", "promedio": 8.0}
     "Oswaldo": {"edad": 21, "carrera": "Mecatronica", "promedio": 7.5},
-    "Roberto": {"edad": 23, "carrera": "Mecatronica", "promedio": 8.9}
+    "Roberto": {"edad": 23, "carrera": "Mecatronica", "promedio": 8.9
+    }
 
-print("Diccionario de estudiantes:")
-for nombre, detalles in estudiantes.items():
-    print(f"{nombre}: {detalles}")
-
-nombre_estudiante = "Cirs"
-if nombre_estudiante in estudiantes:
-    detalles = estudiantes[nombre_estudiante]
-    print(f"\nDetalles de {nombre_estudiante}:")
-    print(f"Edad: {detalles['edad']}")
-    print(f"Carrera: {detalles['carrera']}")
-    print(f"Promedio: {detalles['promedio']}")
-else:
-    print(f"\nEstudiante {nombre_estudiante} no encontrado en el diccionario.")
+Profesores = {
+    "Eduardo": {"Materia": "Programacion Basica", "promedio": 8.5},
+    "Marlen": {"Materia": "Calculo Diferencial", "promedio": 9.0},
+    "Enrique": {"Materia": "Ciencia y Ingenieria de los Materiales", "promedio": 7.0},
+    "Jose": {"Materia": "Estadistica y Control de Calidad", "promedio": 8.9}
+    "Jorge": {"Materia": "Algebra lineal", "promedio": 9.7},
+    "Martha": {"Materia": "Administracion y Contabilidad", "promedio": 9.9
+    }

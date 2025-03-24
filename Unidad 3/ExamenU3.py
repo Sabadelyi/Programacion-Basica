@@ -1,9 +1,29 @@
+from Archivos import leer_diccionarios_de_csv
 import os
 import time
+import csv
 
-# Eqjemplo
-productos = {"001": "Manzanas", "002": "Plátanos"}
-precios = {"001": 10.5, "002": 8.0}
+# Cargar datos desde el archivo CSVS
+productos = {}
+precios = {}
+
+def cargar_datos():
+    try:
+        with open("productos.csv", mode='r', encoding='utf-8') as archivo_csv:
+            lector = csv.DictReader(archivo_csv)
+            for fila in lector:
+                productos[fila["Código"]] = fila["Nombre"]
+                precios[fila["Código"]] = float(fila["Precio"])
+    except FileNotFoundError:
+        print("No se encontró el archivo productos.csv. Se creará uno nuevo al guardar.")
+
+def guardar_datos():
+    with open("productos.csv", mode='w', newline='', encoding='utf-8') as archivo_csv:
+        escritor = csv.DictWriter(archivo_csv, fieldnames=["Código", "Nombre", "Precio"])
+        escritor.writeheader()
+        for codigo, nombre in productos.items():
+            escritor.writerow({"Código": codigo, "Nombre": nombre, "Precio": precios[codigo]})
+    print("Datos guardados en productos.csv exitosamente.")
 
 def imprimir_menu():
     print("\n--- Menú de opciones ---")
@@ -32,25 +52,35 @@ def eliminar_producto():
 def ver_productos():
     print("\n--- Lista de productos ---")
     for codigo, nombre in productos.items():
-        print(f"Código: {codigo}, Producto: {nombre}, Precio: ${precios[codigo]}")
+        print(f"Código: {codigo}, Producto: {nombre}, Precio: ${precios[codigo]:.2f}")
 
 # Ciclo principal
-while True:
-    imprimir_menu()
-    opcion = input("Seleccione una opción: ")
+if __name__ == "__main__":
+    cargar_datos()
 
-    if opcion == "1":
-        agregar_producto()
-    elif opcion == "2":
-        eliminar_producto()
-    elif opcion == "3":
-        ver_productos()
-    elif opcion == "4":
-        print("Saliendo del programa...")
-        time.sleep(1)  # Usando la librería time
-        break
-    else:
-        print("Opción no válida. Inténtelo de nuevo.")
+    while True:
+        imprimir_menu()
+        opcion = input("Seleccione una opción: ")
 
-    time.sleep(10)  
-    os.system("cls" if os.name == "nt" else "clear")  
+        if opcion == "1":
+            agregar_producto()
+        elif opcion == "2":
+            eliminar_producto()
+        elif opcion == "3":
+            ver_productos()
+        elif opcion == "4":
+            guardar_datos()
+            print("Saliendo del programa...")
+            time.sleep(5)  # Usando la librería time
+            break
+        else:
+            print("Opción no válida. Inténtelo de nuevo.")
+
+        time.sleep(5)  
+        os.system("cls" if os.name == "nt" else "clear")
+
+        leer_diccionarios_de_csv(productos, precios)
+
+datos_leidos = leer_diccionarios_de_csv(productos, precios)
+print("Datos leídos del archivo CSV:")
+print(datos_leidos)

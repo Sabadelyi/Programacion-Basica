@@ -3,7 +3,12 @@ import os
 import time
 import csv
 
-# Cargar datos desde el archivo CSVS
+def guardar_diccionarios_en_csv(productos):
+    """Guarda una lista de diccionarios en un archivo CSV."""
+    if not lista_diccionarios:
+        print("productos")
+        return
+
 productos = {}
 precios = {}
 
@@ -54,7 +59,7 @@ def ver_productos():
     for codigo, nombre in productos.items():
         print(f"Código: {codigo}, Producto: {nombre}, Precio: ${precios[codigo]:.2f}")
 
-# Ciclo principal
+
 if __name__ == "__main__":
     cargar_datos()
 
@@ -71,16 +76,16 @@ if __name__ == "__main__":
         elif opcion == "4":
             guardar_datos()
             print("Saliendo del programa...")
-            time.sleep(5)  # Usando la librería time
+            time.sleep(7)
             break
         else:
             print("Opción no válida. Inténtelo de nuevo.")
 
-        time.sleep(5)  
+        time.sleep(7)  
         os.system("cls" if os.name == "nt" else "clear")
 
-        leer_diccionarios_de_csv(productos, precios)
+        leer_diccionarios_de_csv(archivos)
 
-datos_leidos = leer_diccionarios_de_csv(productos, precios)
+datos_leidos = leer_diccionarios_de_csv(productos)
 print("Datos leídos del archivo CSV:")
 print(datos_leidos)

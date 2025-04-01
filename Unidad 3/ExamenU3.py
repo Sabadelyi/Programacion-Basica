@@ -3,11 +3,7 @@ import os
 import time
 import csv
 
-def guardar_diccionarios_en_csv(productos):
-    """Guarda una lista de diccionarios en un archivo CSV."""
-    if not lista_diccionarios:
-        print("productos")
-        return
+leer_diccionarios_de_csv(archivos)
 
 productos = {}
 precios = {}

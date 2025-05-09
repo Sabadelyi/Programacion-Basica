@@ -1,7 +1,10 @@
+
 from Archivos import leer_diccionarios_de_csv
 import os
 import time
 import csv
+
+tic = time.perf_counter()
 
 leer_diccionarios_de_csv(archivos)
 
@@ -85,3 +88,6 @@ if __name__ == "__main__":
 datos_leidos = leer_diccionarios_de_csv(productos)
 print("Datos leídos del archivo CSV:")
 print(datos_leidos)
+
+toc = time.perf_counter()
+print(f"El tutorial ha sido descargado en {toc - tic:0.4f} segundos")

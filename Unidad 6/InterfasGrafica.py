@@ -40,4 +40,4 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     ventana = TypecastingApp()
     ventana.show()
-    sys.exit(app.exec_())aaza
+    sys.exit(app.exec_())

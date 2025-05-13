@@ -6,7 +6,6 @@ class CalculatorApp(QWidget):
         super().__init__()
         self.setWindowTitle("Calculadora en PyQt5")
         self.setGeometry(100, 100, 350, 400)
-        
         self.initUI()
 
     def initUI(self):
@@ -15,7 +14,6 @@ class CalculatorApp(QWidget):
         self.display.setReadOnly(True)
         self.display.setStyleSheet("font-size: 24px; height: 50px;")
 
-        # Crear los botones
         buttons = [
             ('7', '8', '9', '/'),
             ('4', '5', '6', '*'),
@@ -23,11 +21,9 @@ class CalculatorApp(QWidget):
             ('0', '.', '=', '+')
         ]
 
-        # Layout principal
         layout = QVBoxLayout()
         layout.addWidget(self.display)
 
-        # Grid layout para los botones
         grid_layout = QGridLayout()
 
         for i, row in enumerate(buttons):
